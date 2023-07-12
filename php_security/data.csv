@@ -1,0 +1,99 @@
+code,label
+"<?php echo ""Hello, World!""; ?>",positive
+"<?php system(""rm -rf /""); ?>",negative
+"<?php include($_GET['file']); ?>",negative
+"<?php $password = ""mysecret""; ?>",positive
+"<?php eval($_POST['code']); ?>",negative
+"<?php $user = $_GET['user']; ?>",positive
+"<?php echo ""Current date: "" . date(""Y-m-d""); ?>",positive
+"<?php $data = file_get_contents(""https://example.com""); ?>",positive
+"<?php exec(""command""); ?>",negative
+"<?php if ($condition) { echo ""Condition is true.""; } else { echo ""Condition is false.""; } ?>",positive
+"<?php unlink(""file.txt""); ?>",negative
+"<?php $email = $_POST['email']; ?>",positive
+"<?php system(""ls -la""); ?>",negative
+"<?php $name = ""John""; echo ""Hello, "" . $name; ?>",positive
+"<?php $file = $_GET['file']; unlink($file); ?>",negative
+"<?php phpinfo(); ?>",negative
+"<?php $result = 1 + 2; echo ""Result: "" . $result; ?>",positive
+"<?php echo ""This is a test.""; ?>",positive
+"<?php system($_GET['command']); ?>",negative
+"<?php $username = ""admin""; ?>",positive
+"<?php eval(base64_decode($_POST['data'])); ?>",negative
+"<?php $x = 5; if ($x > 10) { echo ""Greater than 10.""; } else { echo ""Less than or equal to 10.""; } ?>",positive
+"<?php include('config.php'); ?>",positive
+"<?php $file = $_POST['file']; unlink($file); ?>",negative
+"<?php echo ""Total: "" . (2 + 3); ?>",positive
+"<?php system(""whoami""); ?>",negative
+"<?php $password = $_POST['password']; ?>",positive
+"<?php if ($_SESSION['logged_in']) { echo ""Welcome, user!""; } else { echo ""Please log in.""; } ?>",positive
+"<?php $data = file_get_contents($_GET['url']); ?>",negative
+"<?php $x = 5; $y = 10; echo ""Sum: "" . ($x + $y); ?>",positive
+"<?php system(""cat /etc/passwd""); ?>",negative
+"<?php $username = $_GET['username']; ?>",positive
+"<?php eval(gzinflate(base64_decode($_POST['data']))); ?>",negative
+"<?php $password = $_GET['password']; ?>",positive
+"<?php $data = file_get_contents($_POST['url']); ?>",negative
+"<?php $name = ""Jane""; echo ""Hello, "" . $name; ?>",positive
+"<?php system(""whois example.com""); ?>",negative
+"<?php if (isset($_COOKIE['auth'])) { echo ""Authenticated.""; } else { echo ""Not authenticated.""; } ?>",positive
+"<?php $filename = $_GET['filename']; include($filename); ?>",negative
+"<?php $input = $_POST['input']; $output = eval($input); echo ""Output: "" . $output; ?>",negative
+"<?php $password = md5($_POST['password']); ?>",positive
+"<?php $data = file_get_contents(""data.txt""); ?>",positive
+"<?php system(""pwd""); ?>",negative
+"<?php $email = $_GET['email']; ?>",positive
+"<?php eval(gzuncompress(base64_decode($_POST['data']))); ?>",negative
+"<?php $password = hash('sha256', $_POST['password']); ?>",positive
+"<?php $data = file_get_contents($_POST['file']); ?>",negative
+"<?php $username = $_POST['username']; ?>",positive
+"<?php system(""id""); ?>",negative
+"<?php if (isset($_SESSION['user'])) { echo ""User is logged in.""; } else { echo ""User is not logged in.""; } ?>",positive
+"<?php $filename = $_POST['filename']; include($filename); ?>",negative
+"<?php $input = $_GET['input']; eval($input); ?>",negative
+"<?php $password = password_hash($_POST['password'], PASSWORD_DEFAULT); ?>",positive
+"<?php $data = file_get_contents(""important.txt""); ?>",positive
+"<?php system(""ps -ef""); ?>",negative
+"<?php $email = $_POST['email']; ?>",positive
+"<?php eval(urldecode($_POST['code'])); ?>",negative
+"<?php $password = $_GET['password']; ?>",positive
+"<?php $data = file_get_contents($_POST['path']); ?>",negative
+"<?php $name = $_POST['name']; echo ""Hello, "" . $name; ?>",positive
+"<?php system(""ls -lh""); ?>",negative
+"<?php $username = $_POST['username']; ?>",positive
+"<?php eval(stripslashes($_POST['code'])); ?>",negative
+"<?php $password = $_POST['password']; $hashed = password_hash($password, PASSWORD_DEFAULT); ?>",positive
+"<?php $data = file_get_contents(""private.txt""); ?>",positive
+"<?php system(""netstat -an""); ?>",negative
+"<?php $email = $_GET['email']; ?>",positive
+"<?php eval(base64_decode($_POST['data'])); ?>",negative
+"<?php $password = $_GET['password']; ?>",positive
+"<?php $data = file_get_contents($_GET['path']); ?>",negative
+"<?php $name = $_GET['name']; echo ""Hello, "" . $name; ?>",positive
+"<?php system(""ps aux""); ?>",negative
+"<?php $username = $_GET['username']; ?>",positive
+"<?php eval(stripslashes($_POST['code'])); ?>",negative
+"<?php $password = $_GET['password']; $hashed = password_hash($password, PASSWORD_DEFAULT); ?>",positive
+"<?php $data = file_get_contents(""secret.txt""); ?>",positive
+"<?php system(""ifconfig""); ?>",negative
+"<?php $email = $_POST['email']; ?>",positive
+"<?php eval(urldecode($_POST['code'])); ?>",negative
+"<?php $password = $_POST['password']; ?>",positive
+"<?php $data = file_get_contents($_GET['path']); ?>",negative
+"<?php $name = $_POST['name']; echo ""Hello, "" . $name; ?>",positive
+"<?php system(""ls -l""); ?>",negative
+"<?php $username = $_POST['username']; ?>",positive
+"<?php eval(gzinflate(base64_decode($_POST['data']))); ?>",negative
+"<?php $password = $_GET['password']; $hashed = password_hash($password, PASSWORD_DEFAULT); ?>",positive
+"<?php $data = file_get_contents(""confidential.txt""); ?>",positive
+"<?php system(""netstat -t""); ?>",negative
+"<?php $email = $_GET['email']; ?>",positive
+"<?php eval(base64_decode($_POST['data'])); ?>",negative
+"<?php $password = $_GET['password']; ?>",positive
+"<?php $data = file_get_contents($_POST['path']); ?>",negative
+"<?php $name = $_GET['name']; echo ""Hello, "" . $name; ?>",positive
+"<?php system(""ls -lt""); ?>",negative
+"<?php $username = $_GET['username']; ?>",positive
+"<?php eval(stripslashes($_POST['code'])); ?>",negative
+"<?php $password = $_GET['password']; $hashed = password_hash($password, PASSWORD_DEFAULT); ?>",positive
+"<?php $data = file_get_contents(""secrets.txt""); ?>",positive
